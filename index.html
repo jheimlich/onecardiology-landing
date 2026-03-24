@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OneCardiology.com — Premium Domain Available</title>
+  <meta name="description" content="OneCardiology.com is a premium domain available for acquisition.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy:       #090e1c;
+      --navy-card:  #111827;
+      --gold:       #c4a35a;
+      --gold-light: #d4b76a;
+      --cream:      #f0ece4;
+      --muted:      rgba(240, 236, 228, 0.45);
+      --border:     rgba(196, 163, 90, 0.18);
+    }
+
+    html, body {
+      height: 100%;
+      font-family: 'Inter', sans-serif;
+      background: var(--navy);
+      color: var(--cream);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Hero ── */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 4rem 2rem 6rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 90% 55% at 50% -5%, rgba(196, 163, 90, 0.09) 0%, transparent 65%),
+        radial-gradient(ellipse 70% 50% at 50% 110%, rgba(9, 14, 28, 0.9) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    /* Subtle corner lines */
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 2.5rem; left: 2.5rem; right: 2.5rem; bottom: 2.5rem;
+      border: 1px solid rgba(196, 163, 90, 0.07);
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 640px;
+    }
+
+    .eyebrow {
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.75rem;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.6rem, 9vw, 5.2rem);
+      font-weight: 400;
+      line-height: 1.06;
+      letter-spacing: -0.01em;
+      color: var(--cream);
+    }
+
+    h1 .tld {
+      color: var(--gold);
+      font-style: italic;
+    }
+
+    .divider {
+      width: 36px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      margin: 2rem auto;
+      opacity: 0.7;
+    }
+
+    .tagline {
+      font-size: 1rem;
+      font-weight: 300;
+      line-height: 1.75;
+      color: var(--muted);
+      max-width: 460px;
+      margin: 0 auto 2.75rem;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      padding: 0.875rem 2.75rem;
+      background: transparent;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      font-family: 'Inter', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background 0.22s ease, color 0.22s ease;
+    }
+
+    .cta-btn:hover {
+      background: var(--gold);
+      color: var(--navy);
+    }
+
+    /* ── Footer ── */
+    footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      padding: 1.1rem 2rem;
+      text-align: center;
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
+      color: rgba(240, 236, 228, 0.2);
+      border-top: 1px solid rgba(196, 163, 90, 0.06);
+    }
+
+    /* ── Modal ── */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(9, 14, 28, 0.88);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      z-index: 100;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+    }
+
+    .modal-overlay.open { display: flex; }
+
+    .modal {
+      background: var(--navy-card);
+      border: 1px solid var(--border);
+      padding: 2.5rem 2.75rem 2.75rem;
+      max-width: 460px;
+      width: 100%;
+      position: relative;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 1.25rem;
+      right: 1.5rem;
+      background: none;
+      border: none;
+      color: var(--muted);
+      font-size: 1.5rem;
+      line-height: 1;
+      cursor: pointer;
+      transition: color 0.18s;
+      padding: 0.25rem;
+    }
+    .modal-close:hover { color: var(--cream); }
+
+    .modal h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.65rem;
+      font-weight: 400;
+      color: var(--cream);
+      margin-bottom: 0.5rem;
+    }
+
+    .modal-sub {
+      font-size: 0.83rem;
+      font-weight: 300;
+      color: var(--muted);
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+
+    .form-group { margin-bottom: 1.25rem; }
+
+    label {
+      display: block;
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 0.45rem;
+    }
+
+    input, textarea {
+      width: 100%;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(196, 163, 90, 0.18);
+      color: var(--cream);
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 300;
+      padding: 0.75rem 1rem;
+      outline: none;
+      border-radius: 0;
+      -webkit-appearance: none;
+      transition: border-color 0.2s;
+    }
+
+    input::placeholder, textarea::placeholder {
+      color: rgba(240, 236, 228, 0.2);
+    }
+
+    input:focus, textarea:focus {
+      border-color: rgba(196, 163, 90, 0.55);
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 95px;
+    }
+
+    .turnstile-wrap { margin: 1.5rem 0 1.25rem; }
+
+    .submit-btn {
+      width: 100%;
+      padding: 0.9rem;
+      background: var(--gold);
+      border: none;
+      color: var(--navy);
+      font-family: 'Inter', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .submit-btn:hover { background: var(--gold-light); }
+
+    /* Success state */
+    .success-msg {
+      display: none;
+      text-align: center;
+      padding: 2rem 0 1rem;
+    }
+
+    .success-msg p {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.35rem;
+      font-weight: 400;
+      color: var(--cream);
+      margin-bottom: 0.6rem;
+    }
+
+    .success-msg small {
+      font-size: 0.83rem;
+      color: var(--muted);
+    }
+
+    /* Error banner */
+    .error-msg {
+      display: none;
+      font-size: 0.8rem;
+      color: #f87171;
+      margin-top: 0.75rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <section class="hero">
+    <div class="hero-content">
+      <p class="eyebrow">Premium Domain Available</p>
+      <h1>OneCardiology<span class="tld">.com</span></h1>
+      <div class="divider"></div>
+      <p class="tagline">
+        A rare opportunity to acquire a clean, memorable brand in one of
+        medicine's most consequential — and consequential — specialties.
+      </p>
+      <button class="cta-btn" onclick="openModal()">Inquire About This Domain</button>
+    </div>
+  </section>
+
+  <footer>
+    &copy; <span id="yr"></span>&nbsp;&nbsp;·&nbsp;&nbsp;Domain inquiries welcome
+  </footer>
+
+  <!-- ── Contact Modal ── -->
+  <div class="modal-overlay" id="modalOverlay" onclick="closeOnOverlay(event)">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" onclick="closeModal()" aria-label="Close">&times;</button>
+
+      <h2 id="modalTitle">Make an Inquiry</h2>
+      <p class="modal-sub">Pricing available upon request. All serious inquiries receive a response within 24 hours.</p>
+
+      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="contactForm">
+        <input type="hidden" name="form-name" value="contact">
+        <p style="display:none"><label>Don't fill this out: <input name="bot-field"></label></p>
+
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" required autocomplete="name">
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required autocomplete="email">
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message <span style="opacity:.4;font-size:.9em;text-transform:none;letter-spacing:0">(optional)</span></label>
+          <textarea id="message" name="message" placeholder="Tell us about your intended use…"></textarea>
+        </div>
+
+        <div class="turnstile-wrap">
+          <!--
+            SETUP: Replace the sitekey below with your key from dash.cloudflare.com → Turnstile.
+            The current key is Cloudflare's public test key (always passes, for development only).
+          -->
+          <div class="cf-turnstile"
+               data-sitekey="1x00000000000000000000AA"
+               data-theme="dark">
+          </div>
+        </div>
+
+        <button type="submit" class="submit-btn">Send Inquiry</button>
+        <p class="error-msg" id="errorMsg">Something went wrong — please try again.</p>
+      </form>
+
+      <div class="success-msg" id="successMsg">
+        <p>Thank you for reaching out.</p>
+        <small>We'll be in touch within 24 hours.</small>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('yr').textContent = new Date().getFullYear();
+
+    function openModal() {
+      document.getElementById('modalOverlay').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      document.getElementById('modalOverlay').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    function closeOnOverlay(e) {
+      if (e.target === document.getElementById('modalOverlay')) closeModal();
+    }
+
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') closeModal();
+    });
+
+    // Netlify Forms — AJAX submission
+    document.getElementById('contactForm').addEventListener('submit', async function (e) {
+      e.preventDefault();
+      const errorEl = document.getElementById('errorMsg');
+      errorEl.style.display = 'none';
+
+      try {
+        const res = await fetch('/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: new URLSearchParams(new FormData(this)).toString()
+        });
+
+        if (!res.ok) throw new Error('Network response was not ok');
+
+        this.style.display = 'none';
+        document.getElementById('successMsg').style.display = 'block';
+        setTimeout(closeModal, 3500);
+      } catch {
+        errorEl.style.display = 'block';
+      }
+    });
+  </script>
+
+</body>
+</html>
